@@ -17,7 +17,7 @@ const historyEl = document.querySelector('.history');
 const overlay = document.getElementById('overlay');
 const calculator = document.querySelector('.calculator');
 
-
+input.value = '0';
 
 // guard in case elements missing
 if (historyToggle && historyEl && overlay && calculator) {
