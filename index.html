@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neumorphic Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./public/style.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="history-container">
+      <div class="calculator text-center">
+        
+        <div class="display-container">
+          <input type="text" class="display">
+          <input type="text" class="show-display">
+        </div>
+
+        <div class="container px-0">
+          <!-- Row 1 -->
+          <div class="row">
+            <button class="btn-calc btn-percent" data-key="%">%</button>
+            <button class="btn-calc btn-ce" data-key="Delete">CE</button>
+            <button class="btn-calc btn-clear" data-key="Escape">C</button>
+            <button class="btn-calc btn-backspace" data-key="Backspace">⌫</button>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="row">
+            <button class="btn-calc btn-divided-by-one" data-key="r">¹/x</button>
+            <button class="btn-calc btn-square" data-key="s">x²</button>
+            <button class="btn-calc btn-square-root" data-key="q">√x</button>
+            <button class="btn-calc btn-show-js" data-key="/">/</button>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="row">
+            <button class="btn-calc btn-show-js" data-key="7">7</button>
+            <button class="btn-calc btn-show-js" data-key="8">8</button>
+            <button class="btn-calc btn-show-js" data-key="9">9</button>
+            <button class="btn-calc btn-show-js" data-key="*">*</button>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="row">
+            <button class="btn-calc btn-show-js" data-key="4">4</button>
+            <button class="btn-calc btn-show-js" data-key="5">5</button>
+            <button class="btn-calc btn-show-js" data-key="6">6</button>
+            <button class="btn-calc btn-show-js" data-key="-">-</button>
+          </div>
+
+          <!-- Row 5 -->
+          <div class="row">
+            <button class="btn-calc btn-show-js" data-key="1">1</button>
+            <button class="btn-calc btn-show-js" data-key="2">2</button>
+            <button class="btn-calc btn-show-js" data-key="3">3</button>
+            <button class="btn-calc btn-show-js" data-key="+">+</button>
+          </div>
+
+          <!-- Row 6 -->
+          <div class="row">
+            <button class="btn-calc btn-sign" data-key="F9">±</button>
+            <button class="btn-calc btn-show-js" data-key="0">0</button>
+            <button class="btn-calc btn-show-js" data-key=".">.</button>
+            <button class="btn-calc btn-equal" data-key="Enter">=</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile toggle + history -->
+      <button id="history-toggle" class="btn-history d-md-none">⏱️</button>
+
+      <div class="history">
+        <h3>History</h3>
+        <ul id="history-list"></ul>
+        <button id="clear-history" class="btn-trash">🗑️</button>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
